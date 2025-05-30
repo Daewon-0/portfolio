@@ -11,12 +11,7 @@ uv는 가상환경이나 패키지 설치를 한번에 해결해준다.
 # 프로젝트 아키텍처
 
 ```mermaid
----
-config:
-  layout: elk
-  theme: redux
-  look: neo
----
+%%{init: { "theme": "redux", "flowchart": {"defaultRenderer": "elk"} } }%%
 flowchart TD
  subgraph User["사용자 / 명령어 입력"]
         A1["명령어 (뉴스 수집/요약/검색/분석)"]
