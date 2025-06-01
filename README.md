@@ -1,6 +1,8 @@
 이 프로젝트의 시작은 다음 명령어로 시작한다.
 ```bash
-git clone https://github.com/Daewon-0/portfolio/tree/master
+git clone https://github.com/Daewon-0/portfolio
+cd portfolio
+pip install uv
 uv python main.py
 ```
 
