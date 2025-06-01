@@ -708,6 +708,7 @@ dependencies = [
     { name = "mcp", extra = ["cli"] },
     { name = "numpy" },
     { name = "pandas" },
+    { name = "python-dotenv" },
 ]
 
 [package.metadata]
@@ -720,6 +721,7 @@ requires-dist = [
     { name = "mcp", extras = ["cli"], specifier = ">=1.9.2" },
     { name = "numpy", specifier = ">=2.2.6" },
     { name = "pandas", specifier = ">=2.2.3" },
+    { name = "python-dotenv", specifier = ">=1.1.0" },
 ]
 
 [[package]]

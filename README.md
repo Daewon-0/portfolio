@@ -1,9 +1,12 @@
+# Web
+[포트폴리오 웹사이트](https://daewon-0.github.io/portfolio/)
+
 이 프로젝트의 시작은 다음 명령어로 시작한다.
 ```bash
 git clone https://github.com/Daewon-0/portfolio
 cd portfolio
 pip install uv
-uv python main.py
+uv run python main.py
 ```
 
 이 프로젝트는 uv를 사용한다.
@@ -94,10 +97,10 @@ RAG 시스템
 
 AI 워크플로우
 
-portfolio/
-├── main.py                    # 메인 실행 파일
-├── src/
-│   ├── langchain_controller.py  # LangChain 컨트롤러
-│   ├── langgraph_workflow.py    # LangGraph 워크플로우
-│   └── storage/
-│       └── database.py          # 데이터베이스 관리
+portfolio/<br>
+├── main.py                    # 메인 실행 파일<br>
+├── src/<br>
+│   ├── langchain_controller.py  # LangChain 컨트롤러<br>
+│   ├── langgraph_workflow.py    # LangGraph 워크플로우<br>
+│   └── storage/<br>
+│       └── database.py          # 데이터베이스 관리<br>
