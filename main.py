@@ -6,7 +6,7 @@ from src.langchain_controller import LangChainController
 from src.langgraph_workflow import NewsWorkflow
 
 from dotenv import load_dotenv
-load_dotenv() # .env 파일 로드
+load_dotenv(".venv/.env") # .env 파일 로드
 
 class NewsSystem:
     def __init__(self):
