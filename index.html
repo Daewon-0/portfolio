@@ -2,61 +2,12 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <title>뉴스 파이프라인 다이어그램</title>
-  <style>
-    body { font-family: sans-serif; padding: 2rem; }
-    pre.mermaid { background: #f0f0f0; padding: 1rem; border-radius: 8px; }
-  </style>
-  <script type="module">
-    import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
-    import elk from "https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@latest/dist/mermaid-layout-elk.esm.min.mjs";
-    mermaid.registerLayoutLoaders(elk);
-    mermaid.initialize({ startOnLoad: true });
-  </script>
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
 </head>
 <body>
-  <h1>뉴스 파이프라인 다이어그램</h1>
-  <pre class="mermaid">
-%%{init: {"theme": "neutral", "flowchart": {"defaultRenderer": "elk"}}}%%
-flowchart TD
-  subgraph User["사용자 / 명령어 입력"]
-      A1["명령어 (뉴스 수집/요약/검색/분석)"]
-  end
-  subgraph LangChain["LangChain Controller"]
-      L1["뉴스 수집 명령 처리"]
-      L2["Tavily API 호출 (검색)"]
-      L3["Think MCP API 호출 (사고/분석)"]
-      L4["LangGraph Workflow 실행"]
-  end
-  subgraph TavilyMCP["Tavily MCP (Smithery API)"]
-      T1["검색 API (헤드라인+본문)"]
-  end
-  subgraph ThinkMCP["Think MCP (Smithery API)"]
-      P1["복잡한 사고/분석 처리"]
-  end
-  subgraph LangGraph["LangGraph Server"]
-      G1["뉴스 수집 노드"]
-      G2["헤드라인 저장 노드"]
-      G3["본문 요약 저장 노드"]
-      G4["RAG 질의응답 처리"]
-      G5["분석 결과 처리 노드"]
-  end
-  subgraph Storage["뉴스 저장소 (DB)"]
-      S1["장기 저장소 (1년, 헤드라인)"]
-      S2["단기 저장소 (1개월, 본문 요약)"]
-  end
-  A1 --> L1 & G4
-  L1 --> L2 & L3 & L4 & G5
-  L2 --> T1
-  T1 --> L1
-  L3 --> P1
-  P1 --> L1
-  L4 --> G1
-  G1 --> G2 & G3
-  G2 --> S1
-  G3 --> S2
-  G4 --> S1 & S2
-  G5 --> S2
-  </pre>
+  <div id="app"></div>
+  <script type="module" src="/src/main.ts"></script>
 </body>
 </html>
