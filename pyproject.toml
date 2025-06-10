@@ -3,7 +3,7 @@ name = "news-collector"
 version = "0.1.0"
 description = "뉴스 수집 및 분석 시스템"
 authors = [
-    {name = "Daewon", email = "your.email@example.com"}
+    {name = "Daewon", email = "sodagraph@mail.coㅡㅎ"}
 ]
 dependencies = [
     "sanic~=23.12.1",
