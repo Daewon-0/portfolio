@@ -141,7 +141,7 @@ import { useStore } from '@/stores/stock'
 import { useNewsStore } from '@/stores/news'
 import { formatDistanceToNow } from 'date-fns'
 import { ko } from 'date-fns/locale'
-import MCPMetrics from '@/components/MCPMetrics.vue'
+import MCPMetrics from '@/components/ModelContextManager.vue'
 
 Chart.register(...registerables)
 
